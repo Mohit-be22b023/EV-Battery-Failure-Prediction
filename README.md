@@ -1,5 +1,7 @@
 # EV-Battery-Failure-Prediction
-This repository contains a complete, 14-stage machine learning workflow designed to predict battery failure in electric vehicles. Built to handle a highly imbalanced dataset of 200,000 telemetry records (9.96% failure rate) across 70 features, the codebase explicitly optimizes for Precision-Recall AUC (PR-AUC) over standard accuracy to ensure practical reliability.
+This repository contains a complete, 14-stage machine learning workflow designed to predict battery failure in electric vehicles. Built to handle a highly imbalanced dataset of 200,000 telemetry records (9.96% failure battery cases) across 70 features. It is a binary classification which classifies as (battery_failure: 1 = failure, 0 = healthy). The dataset covers 20 major EV brands (Tesla, BYD, Hyundai, BMW, Rivian, Tata, and more) and includes realistic data-quality artifacts: 3–5% missing values per column and ~0.6% sensor-glitch outliers in key diagnostic columns. Unlike purely random synthetic data, every feature here is causally wired to real battery-degradation physics ,chemistry-specific aging curves (LFP, NMC, NCA, LMO, LTO), thermal stress, charging habits, driving behavior, and maintenance quality all interact to produce the failure label. There is no single threshold rule behind the target; it's generated from a nonlinear logistic combination of ~15 risk and protective factors plus noise, calibrated to a ~10% failure rate. The codebase explicitly optimizes for Precision-Recall AUC (PR-AUC) over standard accuracy to ensure practical reliability.
+
+
 
 Key Highlights:
   1. Domain-Driven Feature Engineering: Extracts physical degradation signals by engineering 9 custom features, including soh_per_cycle, degradation_rate, and thermal_spread.
