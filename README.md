@@ -1,6 +1,4 @@
 # EV-Battery-Failure-Prediction
-A machine learning model designed to predict electric vehicle battery failures from a highly imbalanced dataset with a 9.96% failure rate. The workflow features leakage-safe median and mode imputation , domain-driven feature engineering , and decision threshold optimization that prioritizes PR-AUC over ROC-AUC for reliable real-world performance.
-
 This repository contains a complete, 14-stage machine learning workflow designed to predict battery failure in electric vehicles. Built to handle a highly imbalanced dataset of 200,000 telemetry records (9.96% failure rate) across 70 features, the codebase explicitly optimizes for Precision-Recall AUC (PR-AUC) over standard accuracy to ensure practical reliability.
 
 Key Highlights:
